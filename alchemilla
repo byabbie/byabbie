@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en-uk" {block:ifDarkmode}data-theme="light"{/block:ifDarkmode}>
+<head>
+<title>frequently asked questions</title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<!-- fontawesome icons -->
+<script src="https://kit.fontawesome.com/da9446efb7.js" crossorigin="anonymous"></script>
+
+<!-- cappuccicons -->
+<script src="//pull.cappuccicons.com/cpf.js"></script>
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<!--scroll script by @annasthms-->
+<script src="//glenthemes.s3.eu-west-2.amazonaws.com/faq-pages/02/annasthms_scroll.js"></script>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("question");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<link rel="stylesheet" media="screen" href="//assets.tumblr.com/client/prod/standalone/blog-network-npf/index.build.css">
+
+<!--
+    
+    alchemilla: faq page 01 by abbie / @abbiecodes
+    
+    you may:
+    — edit to your liking.
+    you may not:
+    — remove my credit.
+    — reupload the code as your own.
+    
+-->
+
+<!-- CSS -->
+
+<style type="text/css">
+
+/*-- styling --*/
+
+:root {
+    --font: 'Inter', sans-serif;
+    --fontsize: 13px;
+    --bodycolour: #000;
+    --postcolour: #181818;
+    --textcolour: #fff;
+    --accentcolour: #7a5044;
+    --linkcolour: #8f6d64;
+    --bordercolour: #3b3b3b;
+}
+
+body {
+    font-family: var(--font);
+    font-size: var(--fontsize);
+    background-color: var(--bodycolour);
+    color: var(--textcolour);
+    word-wrap:break-word;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--linkcolour); 
+    text-decoration: none;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+a:hover {
+    color: var(--accentcolour);
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+blockquote {
+    padding: 0 0 0 1.5em;
+    border-left: 1px solid var(--bordercolour);
+    margin: 1.5em 0 1.5em 1.5em;
+}
+
+h1, h2, h3, h4, h5, .title {
+    letter-spacing: 0.06em;
+    line-height: 145%;
+    font-weight: bold;
+}
+
+h1, .title {font-size: 16px;}
+h2 {font-size: 15px;}
+h3 {font-size: 14px;}
+h4 {font-size: 13px;}
+h5 {font-size: 12px;}
+
+small {font-size: 8px;}
+big {font-size: 11px;}
+
+hr {
+    height: 1px;
+    border: none;
+    box-shadow: none;
+    background-color: var(--bordercolour);
+}
+
+pre {
+    line-height: inherit;
+    font-size: inherit;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+/*-- tumblr controls --*/
+
+.tmblr-iframe, .iframe-controls–desktop {
+    display:none !important;
+}
+
+#container { 
+    background: var(--postcolour);
+    border: 1px dashed var(--bordercolour);
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 800px;
+    height: 600px;
+}
+
+.header {
+    border-bottom: 1px dashed var(--bordercolour);
+    position: absolute;
+    margin-left: 200px;
+    width: 600px;
+    height: 75px;
+}
+
+.sidebar {
+    border-right: 1px dashed var(--bordercolour);
+    position: absolute;
+    width: 200px;
+    height: 600px;
+    
+}
+
+.sidebar-image {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    right: 10px;
+    width: 180px;
+    height: 180px;
+}
+
+.sidebar img {
+    width: 180px;
+    height: 180px;
+}
+
+.sidebar-title-box {
+    outline: 1px solid var(--bordercolour);
+    outline-offset: -1px;
+    margin-top: 10px;
+}
+
+.sidebar-title {
+    font-size:20px;
+    font-family: 'Amalfi Coast';
+    text-align:center;
+}
+
+.sidebar-list-box {
+    border-bottom: 1px solid var(--bordercolour);
+    border-left: 1px solid var(--bordercolour);
+    border-right: 1px solid var(--bordercolour);
+    margin-top:-12px;
+}
+
+.sidebar-list {
+    font-size:0.75rem;
+    font-family: 'Inter';
+    padding-top: 8px;
+}
+
+ul {
+    list-style-type: none;
+    margin-left:-30px;
+}
+
+.title {
+    font-size:30px;
+    font-family: 'Abril Fatface';
+    font-weight: 400;
+    padding:10px;
+}
+
+#main {
+    margin-left:215px;
+    margin-bottom:50px;
+    margin-top:90px;
+    width:575px;
+    height:500px;
+    overflow-y:scroll;
+}
+
+.q-a-box {
+    border: 1px dashed var(--bordercolour);
+    border-radius:25px;
+    position:relative;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin-bottom:10px;
+}
+
+.q {
+    border: 1px solid var(--bordercolour);
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    bottom:10px;
+    padding:8px;
+    margin-top:-35px;
+    margin-left:60px;
+    width:150px;
+    height:auto;
+    margin-right:65px;
+}
+
+.q-icon {
+    z-index:10;
+    width:50px;
+    height:50px;
+}
+
+.q-icon img {
+    width:50px;
+    height:50px;
+    border-radius:50px;
+}
+
+.a {
+    border: 1px solid var(--bordercolour);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    display:flex;
+    position:relative;
+    top:10px;
+    margin-bottom:15px;
+    left:100px;
+    padding:8px;
+    margin-right:10px;
+    width:150px;
+    height:auto;
+    margin-left:175px;
+}
+
+.a-icon {
+    float:right;
+    margin-bottom:10px;
+    width:50px;
+    height:auto;
+}
+
+.a-icon img {
+    width:50px;
+    height:50px;
+    border-radius:50px;
+}
+
+/*-- tooltips --*/
+
+.tippy-box[data-theme~='croissant'] {
+  background-color:var(--bodycolour);
+  color:var(--textcolour);
+  border: 1px solid var(--bordercolour);
+  font-size:11px;
+  letter-spacing:0.5px;
+  text-transform:lowercase;
+  z-index:99999999999999;
+}
+
+/*-- credit --*/
+
+#credit {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 13px;
+    outline: 1px solid var(--bordercolour);
+    outline-offset: +4px;
+}
+
+.credit:before{
+    content:'';
+    font-family:'cappuccicons';
+    font-size:13px;
+}
+
+/*-- scrollbar --*/
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 14px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--bodycolour);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--accentcolour);
+    border-radius: 10px;
+    border: 3px solid var(--bodycolour);
+  }
+  
+/*-- selection --*/
+  
+::selection {
+background:#a0817a;
+color: #fff;
+}
+ 
+::-moz-selection {
+background:#a0817a;
+color: #fff;
+}
+
+  {CustomCSS}
+
+</style>
+</head>
+<body>
+<div id="container">
+    <div class="header">
+    <div class="title">
+        — frequently asked questions  
+        </div>
+    </div>
+    <div class="sidebar">
+    <div class="sidebar-image">
+    <img src="https://cdn.discordapp.com/attachments/1083206989896753152/1087622171494465647/side.gif">
+    <div class="sidebar-title-box">
+    <div class="sidebar-title">q&a directory</div>
+    </div>
+    <div class="sidebar-list-box">
+        <div class="sidebar-list">
+            <ul>
+                <li>— a question</li>
+                <li>— another question</li>
+                <li>— yet another question</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div id="main" class="main">
+    
+    <div class="q-a-box">
+    <div class="q-icon">
+        <img src="https://64.media.tumblr.com/43e50b761c5f5adc60878ef3e8d18e21/981894e75a366ba8-b3/s250x400/f8b67d0a2e254b916b2a77d4262b1c6bac73da8a.jpg">
+    </div>
+        <div class="q" id="one">here's a question</a></div>
+    <div class="a-icon">
+        <img src="https://64.media.tumblr.com/74fb179f44717221b98d5d64907ea13e/010996346f9f6668-7a/s250x400/d8b34520c232d90d04baf061147d1a1d65ee512d.jpg">
+    </div>        
+        <div class="a">an answer</div>
+        </div>
+        
+    <div class="q-a-box">
+    <div class="q-icon">
+        <img src="https://64.media.tumblr.com/c0af09c267941650018a27f5ad13b838/43c6a2bba3333a38-b2/s250x400/f3de48cbbc73db9beff58a1790c1d6806efe127c.jpg">
+    </div>
+        <div class="q" id="two">here's another question</a></div>
+    <div class="a-icon">
+        <img src="https://64.media.tumblr.com/74fb179f44717221b98d5d64907ea13e/010996346f9f6668-7a/s250x400/d8b34520c232d90d04baf061147d1a1d65ee512d.jpg">
+    </div>        
+        <div class="a">another answer</div>
+        </div>
+        
+    <div class="q-a-box">
+    <div class="q-icon">
+        <img src="https://64.media.tumblr.com/fb68ca89b8ee1d21b22055312478d0fe/80457442906f8ef9-a9/s250x400/faa0588118d76049d92fb73e2a81609df6d4d508.jpg">
+    </div>
+        <div class="q" id="three">and yet another question</a></div>
+    <div class="a-icon">
+        <img src="https://64.media.tumblr.com/74fb179f44717221b98d5d64907ea13e/010996346f9f6668-7a/s250x400/d8b34520c232d90d04baf061147d1a1d65ee512d.jpg">
+    </div>        
+        <div class="a">and yet another answer</div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- credit. no touchy. -->
+
+<div class="credit"><a href="https://abbiecodes.tumblr.com" title="byabbie." id="credit"><i class="cp cp-croissant-o"></i></a></div>
+<!-- scripts -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script>
+tippy('[title]', {
+    role: 'tooltip',
+    theme: 'croissant',
+    arrow: false,
+    placement: 'bottom',
+ 
+    content(reference) {
+    const title = reference.getAttribute('title');
+    reference.removeAttribute('title');
+    return title;
+    },
+});
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>
